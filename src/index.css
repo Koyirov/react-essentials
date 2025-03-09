@@ -77,3 +77,19 @@ input.invalid {
 .text-button:hover {
   color: #f0920e;
 }
+
+#examples menu button.hover {
+  background-color: #1b082f;
+  color: #ebe7ef;
+}
+
+#examples menu button.active {
+  background-color: #7925d3;
+  color: #ebe7ef;
+}
+
+#tab-content {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #2f1d43;
+}
