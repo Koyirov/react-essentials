@@ -1,20 +1,20 @@
+import { CORE_CONCEPTS } from "../../data";
+import CoreConcept from "../CoreConcept/CoreConcept";
 import React from "react";
-import './CoreConcepts.css';
+import Section from "../Section/Section";
 
-type CoreConceptType = {
-    image: any,
-    title: string,
-    description: string,
-}
 
-function CoreConcept({ image, title, description }: CoreConceptType) {
+function CoreConcepts() {
+
     return (
-        <li>
-            <img src={image} alt={title}/>
-            <h3>{title}</h3>
-            <p>{description}</p>
-        </li>
-    )
+        <Section id="core-concept" title={"Core Concept"}>
+            <ul>
+                {CORE_CONCEPTS.map((item: any, index: number) => (
+                    <CoreConcept key={index} {...item}/>
+                ))}
+            </ul>
+        </Section>
+    );
 }
 
-export default CoreConcept;
+export default CoreConcepts;

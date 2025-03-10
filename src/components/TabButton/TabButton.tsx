@@ -1,15 +1,15 @@
 import React, {ReactNode} from "react";
 
 type TabButtonType = {
-    onSelect: any;
+    onClick: any;
     isSelected: boolean
     children: ReactNode;
 }
 
-function TabButton({onSelect, isSelected, children}: TabButtonType) {
+function TabButton({isSelected, children, ...props}: TabButtonType) {
 
     return (
-        <li><button className={isSelected ? "active" : undefined} onClick={onSelect}>{children}</button></li>
+        <li><button className={isSelected ? "active" : undefined} {...props}>{children}</button></li>
     );
 }
 
